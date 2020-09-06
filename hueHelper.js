@@ -14,7 +14,7 @@ function sleep(sec) {
 }
 
 const log = (msg) => {
-  console.log(`${new Date()} - ${msg}`);
+  //console.log(`${new Date()} - ${msg}`);
 }
 
 //returns an object where key is groupID and value is the name of the room

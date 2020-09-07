@@ -47,8 +47,10 @@ const startTimer = async (roomName, durationSec, direction) => {
     lightList.forEach(lightId => {
       hueHelper.setLightAlert(lightId, 10);
     });
+    let existingTimerIndex = existingTimers.findIndex(timer => timer.room == roomName);
+    stopTimer(existingTimerIndex);
     log(`${roomName} timer completed!`);
-  }, lightList.length * perLightDuration * 1000));
+  }, durationSec * 1000));
 
 
   existingTimers.push(timerObj);

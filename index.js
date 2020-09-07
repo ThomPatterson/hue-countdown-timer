@@ -71,7 +71,7 @@ const doSingleLightSequence = async (lightId, duration) => {
 }
 
 const stopTimer = (i) => {
-  for (let j = 0; j < existingTimers[i].timeouts; j++) {
+  for (let j = 0; j < existingTimers[i].timeouts.length; j++) {
     clearTimeout(existingTimers[i].timeouts[j]);
   }
   existingTimers = [

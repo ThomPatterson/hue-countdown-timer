@@ -27,7 +27,7 @@ const startTimer = async (roomName, durationSec, direction) => {
   let room = roomList.find(room => room.name == roomName);
   let lightList = room.lights;
 
-  if (direction == "backwards") {
+  if (direction == "backward") {
     lightList.reverse();
   }
 

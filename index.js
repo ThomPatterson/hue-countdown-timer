@@ -96,7 +96,7 @@ app.get('/startTimer', async (req, res) => {
   try {
     let room = (req.query.hasOwnProperty('room')) ? req.query.room : false;
     let durationSec = (req.query.hasOwnProperty('durationSec')) ? req.query.durationSec : false;
-    let direction = (req.query.hasOwnProperty('direction')) ? req.query.durationSec : config.DEFAULT_DIRECTION;
+    let direction = (req.query.hasOwnProperty('direction')) ? req.query.direction : config.DEFAULT_DIRECTION;
 
     if (!room) {
       return res.status(400).send('Missing required parameter: room');
